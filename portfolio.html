@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <!--шапка-->
     <header>
@@ -339,11 +340,21 @@
         <!--Подпишитесь на рассылку-->
         <div class="slogan">
           <b class="text">Подпишитесь на рассылку</b>
-          <a href="#" class="button-web sign"
-            >Подписаться<svg class="icon-send" width="24px" height="24px">
-              <use href="./images/sprite.svg#icon-icon-send"></use>
-            </svg>
-          </a>
+          <form class="form-sign">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              autocomplete="on"
+            />
+
+            <a href="#" class="button-web sign"
+              >Подписаться
+              <svg class="icon-send" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-icon-send"></use>
+              </svg>
+            </a>
+          </form>
         </div>
       </div>
       <p class="bottom-info container">2020 | Developed by GoIT Students</p>
