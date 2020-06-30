@@ -251,10 +251,7 @@ ul {
   opacity: 1;
   transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%,-50%) scale(0.75);
 }
@@ -385,12 +382,21 @@ ul {
 .comment:focus {
   border-color: var(--accent-color);
 }
+.field-comment .comment::placeholder {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
 
-.comment-title {
+.comment:focus::placeholder {
+  color: var(--accent-color);
+}
+/*.comment-title {
   position: absolute;
   display: block;
-  top: 12px;
-  left: 16px;
+ 
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -402,7 +408,8 @@ ul {
 .comment:not(:placeholder-shown) + .comment-title{
   transform: translateY(-40px);
   color: var(--accent-color);
-}
+
+*/
 
 
 .field.agree {
