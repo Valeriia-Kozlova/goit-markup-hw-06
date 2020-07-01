@@ -66,12 +66,12 @@
             эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button class="button-web" data-open-modal>
+          <button data-modal-open class="button-web">
             Заказать услугу
           </button>
         </div>
       </section>
-      <div class="backdrop" data-modal>
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <form class="form" autocomplete="off">
             <button class="cross-modal">
@@ -146,107 +146,30 @@
                 placeholder="Коментарий"
               ></textarea>
             </div>
-          </div>
+
+            <div class="field agree list">
+              <label class="label-checkbox">
+                <input
+                  class="input-checkbox"
+                  type="checkbox"
+                  name="agreement"
+                  value="agree"
+                />
+
+                <svg class="checkbox-icon" width="16" height="15">
+                  <use href="./images/sprite.svg#icon-checked-form"></use>
+                </svg>
+                Соглашаюсь с рассылкой и принимаю
+                <a href="" class="checkbox-link">Условия договора</a>
+              </label>
+            </div>
+
+            <button data-modal-close class="button-modal list" type="submit">
+              Отправить
+            </button>
+          </form>
         </div>
       </div>
-
-      <!--<section class="hero">
-        <div class="hero-container overlay">
-          <h1 class="hero-name">
-            эффективные решения<br />
-            для вашего бизнеса
-          </h1>
-          <button class="button-web" data-modal-open>Заказать услугу</button>
-        </div>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <form class="form" autocomplete="off">
-              <button class="cross-modal">
-                <svg class="cross-icon" width="11" height="11">
-                  <use href="./images/sprite.svg#icon-cross-form"></use>
-                </svg>
-              </button>
-              <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
-
-              <div class="field">
-                <input
-                  class="input-form list"
-                  id="name"
-                  type="text"
-                  name="name"
-                  placeholder=" "
-                />
-                <label class="label-form" for="name">
-                  Имя
-                </label>
-                <svg class="form-name-icon" width="12" height="12">
-                  <use href="./images/sprite.svg#icon-person-form"></use>
-                </svg>
-              </div>
-
-              <div class="field">
-                <input
-                  class="input-form list"
-                  id="tel"
-                  type="tel"
-                  name="cell-phone"
-                  placeholder=" "
-                />
-                <label class="label-form" for="tel">
-                  Телефон
-                </label>
-                <svg class="form-name-icon" width="13" height="13">
-                  <use href="./images/sprite.svg#icon-tel-form"></use>
-                </svg>
-              </div>
-
-              <div class="field">
-                <input
-                  class="input-form list"
-                  id="email"
-                  type="email"
-                  name="email"
-                  autocomplete="on"
-                  placeholder=" "
-                />
-                <label class="label-form" for="email">
-                  Почта
-                </label>
-                <svg class="form-name-icon" width="15" height="12">
-                  <use href="./images/sprite.svg#icon-envelope-form"></use>
-                </svg>
-              </div>
-
-              <div class="field-comment">
-                <textarea class="comment" name="comment" placeholder=" ">
-                </textarea>
-                <span class="comment-title">Комментарий</span>
-              </div>
-
-              <div class="field agree list">
-                <label class="label-checkbox">
-                  <input
-                    class="input-checkbox"
-                    type="checkbox"
-                    name="agreement"
-                    value="agree"
-                  />
-
-                  <svg class="checkbox-icon" width="16" height="15">
-                    <use href="./images/sprite.svg#icon-checked-form"></use>
-                  </svg>
-                  Соглашаюсь с рассылкой и принимаю
-                  <a href="" class="checkbox-link">Условия договора</a>
-                </label>
-              </div>
-              <button class="button-modal" type="submit" data-modal-close>
-                Отправить
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-      -->
 
       <!--Наши преимущества-->
       <section class="section">
@@ -663,7 +586,7 @@
       </div>
       <p class="bottom-info container">2020 | Developed by GoIT Students</p>
     </footer>
+
     <script src="./js/modal.js"></script>
-    <script src="./js/send.js"></script>
   </body>
 </html>
